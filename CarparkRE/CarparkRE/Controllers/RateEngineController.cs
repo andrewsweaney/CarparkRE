@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-using CarparkRE_Lib;
+using CarparkRE_Lib.Models;
 using Newtonsoft.Json;
 
 namespace CarparkRE.Controllers
@@ -41,7 +41,7 @@ namespace CarparkRE.Controllers
                 var cpEngine = new CarparkRE_Lib.RateEngine();
                 if (cpEngine.LoadRates() >= 0)
                 {
-                    oRate = cpEngine.CalculateTotal(oInput);
+                    oRate = cpEngine.CalculateParkingCharge(oInput);
                 }
                 else
                 {

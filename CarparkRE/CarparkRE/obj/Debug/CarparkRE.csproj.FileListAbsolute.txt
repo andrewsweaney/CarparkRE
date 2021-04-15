@@ -1,3 +1,4 @@
+F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE\bin\CarParkRates.json
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE\bin\CarparkRE.dll.config
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE\bin\CarparkRE.dll
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE\bin\CarparkRE.pdb

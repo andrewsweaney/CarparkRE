@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarparkRE_Lib
+namespace CarparkRE_Lib.Models
 {
     public class CPRateRQ
     {

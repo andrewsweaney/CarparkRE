@@ -96,6 +96,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="README.md" />
+    <Content Include="CarParkRates.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
