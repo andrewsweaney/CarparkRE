@@ -8,4 +8,3 @@ F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE.Tests\bin\Debug\Newtonsoft
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE.Tests\obj\Debug\CarparkRE.Tests.dll
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE.Tests\obj\Debug\CarparkRE.Tests.pdb
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE.Tests\bin\Debug\CarParkRates.json
-F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE.Tests\obj\Debug\CarparkRE.Tests.csprojResolveAssemblyReference.cache

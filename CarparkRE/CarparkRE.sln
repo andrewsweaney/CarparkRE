@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkRE", "CarparkRE\CarparkRE.csproj", "{96A653D8-366A-4CED-90D5-784E2C381AA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkRE.Tests", "CarparkRE.Tests\CarparkRE.Tests.csproj", "{2CC0B0DB-D98E-437A-A3E0-C485FE9F01F8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkRE_Lib", "CarparkRE_Lib\CarparkRE_Lib.csproj", "{B9C71243-2CBA-4A93-884C-2B70D0BAD95E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkRE_Lib.Tests", "CarparkRE_Lib.Tests\CarparkRE_Lib.Tests.csproj", "{0A5CBE33-6F1A-4F35-AA41-D49430E1E7C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkREAPI.Tests", "CarparkREAPI.Tests\CarparkREAPI.Tests.csproj", "{14E9955A-3E73-4E7F-AFAB-487E542773D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{96A653D8-366A-4CED-90D5-784E2C381AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96A653D8-366A-4CED-90D5-784E2C381AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96A653D8-366A-4CED-90D5-784E2C381AA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CC0B0DB-D98E-437A-A3E0-C485FE9F01F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CC0B0DB-D98E-437A-A3E0-C485FE9F01F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CC0B0DB-D98E-437A-A3E0-C485FE9F01F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CC0B0DB-D98E-437A-A3E0-C485FE9F01F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B9C71243-2CBA-4A93-884C-2B70D0BAD95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9C71243-2CBA-4A93-884C-2B70D0BAD95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9C71243-2CBA-4A93-884C-2B70D0BAD95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{0A5CBE33-6F1A-4F35-AA41-D49430E1E7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A5CBE33-6F1A-4F35-AA41-D49430E1E7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A5CBE33-6F1A-4F35-AA41-D49430E1E7C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E9955A-3E73-4E7F-AFAB-487E542773D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E9955A-3E73-4E7F-AFAB-487E542773D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E9955A-3E73-4E7F-AFAB-487E542773D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E9955A-3E73-4E7F-AFAB-487E542773D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
