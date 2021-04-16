@@ -35,57 +35,71 @@
                "DayOfTheWeek":0,
                "EntryStartTime":"06:00",
                "EntryEndTime":"09:00",
+               "EntryEndAddDays":0,
                "ExitStartTime":"15:30",
                "ExitEndTime":"23:30",
-               "MaxMinutes":1050
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":0
             },
             {
                "DayOfTheWeek":1,
                "EntryStartTime":"06:00",
                "EntryEndTime":"09:00",
+               "EntryEndAddDays":0,
                "ExitStartTime":"15:30",
                "ExitEndTime":"23:30",
-               "MaxMinutes":1050
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":0
             },
             {
                "DayOfTheWeek":2,
                "EntryStartTime":"06:00",
                "EntryEndTime":"09:00",
+               "EntryEndAddDays":0,
                "ExitStartTime":"15:30",
                "ExitEndTime":"23:30",
-               "MaxMinutes":1050
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":0
             },
             {
                "DayOfTheWeek":3,
                "EntryStartTime":"06:00",
                "EntryEndTime":"09:00",
+               "EntryEndAddDays":0,
                "ExitStartTime":"15:30",
                "ExitEndTime":"23:30",
-               "MaxMinutes":1050
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":0
             },
             {
                "DayOfTheWeek":4,
                "EntryStartTime":"06:00",
                "EntryEndTime":"09:00",
+               "EntryEndAddDays":0,
                "ExitStartTime":"15:30",
                "ExitEndTime":"23:30",
-               "MaxMinutes":1050
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":0
             },
             {
                "DayOfTheWeek":5,
                "EntryStartTime":"06:00",
                "EntryEndTime":"09:00",
+               "EntryEndAddDays":0,
                "ExitStartTime":"15:30",
                "ExitEndTime":"23:30",
-               "MaxMinutes":1050
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":0
             },
             {
                "DayOfTheWeek":6,
                "EntryStartTime":"06:00",
                "EntryEndTime":"09:00",
+               "EntryEndAddDays":0,
                "ExitStartTime":"15:30",
                "ExitEndTime":"23:30",
-               "MaxMinutes":1050
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":0
             }
          ]
       },
@@ -97,41 +111,51 @@
                "DayOfTheWeek":1,
                "EntryStartTime":"18:00",
                "EntryEndTime":"00:00",
+               "EntryEndAddDays":1,
                "ExitStartTime":"00:00",
                "ExitEndTime":"08:00",
-               "MaxMinutes":840
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":1
             },
             {
                "DayOfTheWeek":2,
                "EntryStartTime":"18:00",
                "EntryEndTime":"00:00",
+               "EntryEndAddDays":1,
                "ExitStartTime":"00:00",
                "ExitEndTime":"08:00",
-               "MaxMinutes":840
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":1
             },
             {
                "DayOfTheWeek":3,
                "EntryStartTime":"18:00",
                "EntryEndTime":"00:00",
+               "EntryEndAddDays":1,
                "ExitStartTime":"00:00",
                "ExitEndTime":"08:00",
-               "MaxMinutes":840
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":1
             },
             {
                "DayOfTheWeek":4,
                "EntryStartTime":"18:00",
                "EntryEndTime":"00:00",
+               "EntryEndAddDays":1,
                "ExitStartTime":"00:00",
                "ExitEndTime":"08:00",
-               "MaxMinutes":840
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":1
             },
             {
                "DayOfTheWeek":5,
                "EntryStartTime":"18:00",
                "EntryEndTime":"00:00",
+               "EntryEndAddDays":1,
                "ExitStartTime":"00:00",
                "ExitEndTime":"08:00",
-               "MaxMinutes":840
+               "ExitEndAddDays":0,
+               "DaysBetweenEntryExit":1
             }
          ]
       },
@@ -143,17 +167,21 @@
                "DayOfTheWeek":6,
                "EntryStartTime":"00:00",
                "EntryEndTime":"00:00",
+               "EntryEndAddDays":2,
                "ExitStartTime":"00:00",
                "ExitEndTime":"00:00",
-               "MaxMinutes":2880
+               "ExitEndAddDays":2,
+               "DaysBetweenEntryExit":0
             },
             {
                "DayOfTheWeek":0,
                "EntryStartTime":"00:00",
                "EntryEndTime":"00:00",
+               "EntryEndAddDays":1,
                "ExitStartTime":"00:00",
                "ExitEndTime":"00:00",
-               "MaxMinutes":2880
+               "ExitEndAddDays":1,
+               "DaysBetweenEntryExit":0
             }
          ]
       }

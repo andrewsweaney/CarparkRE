@@ -8,10 +8,16 @@ namespace CarparkRE_Lib.Models
 {
     public class CPRateRS
     {
-        public string RateName { get; set; }
-        public decimal TotalPrice { get; set; }
+        public string RateName { get; set; }                // The rate being applied
+        public decimal TotalPrice { get; set; }             // The total price for the customer to pay
 
-        public int ErrorHResult { get; set; }
-        public string ErrorMsg { get; set; }
+        public int ErrorHResult { get; set; }               // if any exceptions are encountered this will have the HResult or -1 for custom errors
+        public string ErrorMsg { get; set; }                // Holds the error message should any errors occur
+
+        public CPRateRS()
+        {
+            RateName = "";
+            ErrorMsg = "";
+        }
     }
 }

@@ -57,10 +57,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CarparkRE\CarparkRE.csproj">
-      <Project>{96A653D8-366A-4CED-90D5-784E2C381AA0}</Project>
-      <Name>CarparkRE</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CarparkRE_Lib\CarparkRE_Lib.csproj">
       <Project>{b9c71243-2cba-4a93-884c-2b70d0bad95e}</Project>
       <Name>CarparkRE_Lib</Name>
@@ -68,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="CarParkRates.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

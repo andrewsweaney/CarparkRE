@@ -8,13 +8,14 @@ namespace CarparkRE_Lib.Models
 {
     public class FlatRate
     {
-        public string Name { get; set; }
-        public decimal Amount { get; set; }
+        public string Name { get; set; }                // Name of the rate
+        public decimal Amount { get; set; }             // Flat rate charge
 
-        public List<Condition> Conditions { get; }
+        public List<Condition> Conditions { get; }      // A list of conditions that need to be met for the rate to come into effect
 
         public FlatRate()
         {
+            Name = "";
             Conditions = new List<Condition>();
         }
     }
