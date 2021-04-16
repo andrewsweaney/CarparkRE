@@ -9,7 +9,7 @@ There are 4 projects in this Solution.
 
 Other files of note:
 * CarParkRates.json : Holds the data for the Rates that will be used for the demonstration code
-* CarparkRateEngine.postman : A postman collection for running against the Web API
+* Carpark Rate Engine.postman_collection.json : A postman collection (v2.1) for running against the Web API
 
 This demo app was written to serve as a solution to a code challenge to develop an API that performs rate calculations for carpark customers
 

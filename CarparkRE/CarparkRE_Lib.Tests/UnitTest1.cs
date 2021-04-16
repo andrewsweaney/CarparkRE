@@ -54,7 +54,7 @@ namespace CarparkRE_Lib.Tests
 
 
             // Test loading the rates to ensure its getting some
-            var ret = engine.LoadRates();
+            var ret = engine.LoadRates("CarParkRates.json");
             Assert.IsTrue(ret == 0);
             Assert.IsTrue(engine.GetFlatRates().Count > 0);
             Assert.IsTrue(engine.GetStandardRates() != null);
@@ -71,7 +71,7 @@ namespace CarparkRE_Lib.Tests
             //         3+ Hours : $20      flat rate for each calendar day of parking
 
             var engine = new CarparkRE_Lib.RateEngine();
-            var ret = engine.LoadRates();
+            var ret = engine.LoadRates("CarParkRates.json");
             Assert.IsTrue(ret == 0);
 
             DateTime dtTest = new DateTime(2021, 4, 15);
@@ -107,7 +107,7 @@ namespace CarparkRE_Lib.Tests
 
             // Standard Rate - 2 Days 7 Hours 47 Mins - Maximum Rate $20 per day
             rq.EntryDT = dtTest.AddHours(9);                    // Thursday 9:00 AM
-            rq.ExitDT = dtTest.AddDays(2).AddHours(16).AddMinutes(47);     // Thursday 16:47 (4:47 PM)
+            rq.ExitDT = dtTest.AddDays(2).AddHours(16).AddMinutes(47);     // Saturday 16:47 (4:47 PM)
             rs = engine.CalculateParkingCharge(rq);
             Assert.IsTrue(rs.RateName == "Standard Rate");
             Assert.IsTrue(rs.TotalPrice == 60);
@@ -124,7 +124,7 @@ namespace CarparkRE_Lib.Tests
             //         Exit Condition: Exit between 3:30 PM to 11:30 PM
 
             var engine = new CarparkRE_Lib.RateEngine();
-            var ret = engine.LoadRates();
+            var ret = engine.LoadRates("CarParkRates.json");
             Assert.IsTrue(ret == 0);
 
             DateTime dtTest = new DateTime(2021, 4, 15);
@@ -150,7 +150,7 @@ namespace CarparkRE_Lib.Tests
             //                          Assumption: Exiting before 8 AM is intended to be 8 AM the next day
 
             var engine = new CarparkRE_Lib.RateEngine();
-            var ret = engine.LoadRates();
+            var ret = engine.LoadRates("CarParkRates.json");
             Assert.IsTrue(ret == 0);
 
             DateTime dtTest = new DateTime(2021, 4, 15);
@@ -182,7 +182,7 @@ namespace CarparkRE_Lib.Tests
             //         Exit Condition: Exit any time before midnight on Sunday
 
             var engine = new CarparkRE_Lib.RateEngine();
-            var ret = engine.LoadRates();
+            var ret = engine.LoadRates("CarParkRates.json");
             Assert.IsTrue(ret == 0);
 
             DateTime dtTest = new DateTime(2021, 4, 17);
@@ -203,7 +203,7 @@ namespace CarparkRE_Lib.Tests
             //         The customer should get the cheapest deal based on the rules which apply to the time period
 
             var engine = new CarparkRE_Lib.RateEngine();
-            var ret = engine.LoadRates();
+            var ret = engine.LoadRates("CarParkRates.json");
             Assert.IsTrue(ret == 0);
 
             DateTime dtTest = new DateTime(2021, 4, 15);

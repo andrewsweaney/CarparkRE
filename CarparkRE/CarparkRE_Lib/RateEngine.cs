@@ -16,21 +16,41 @@ namespace CarparkRE_Lib
 
         public StandardRate GetStandardRates() { return _mRates.StandardRates; }
         public List<FlatRate> GetFlatRates() { return _mRates.FlatRates; }
+        public Rates GetRates() { return _mRates; }
 
         /// <summary>
         /// Loads the rate table, currently from a Json file.
         /// </summary>
         /// <returns></returns>
-        public int LoadRates()
+        public int LoadRates(string sJsonFilePath)
         {
             try
             {
                 // Get the rates from Json file, normally these would be obtained from a database
-                using (StreamReader r = new StreamReader("CarParkRates.json"))
+                using (StreamReader r = new StreamReader(sJsonFilePath))
                 {
                     string json = r.ReadToEnd();
                     _mRates = JsonConvert.DeserializeObject<Rates>(json);
                 }
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Loads the rate table, the rate table information should be passed in.
+        /// </summary>
+        /// <returns></returns>
+        public int LoadRates(Rates oRateCard)
+        {
+            try
+            {
+                // Get the rates from the passed in information
+                _mRates = oRateCard;
             }
             catch (Exception)
             {

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using System.IO;
 using CarparkRE.Controllers;
 using CarparkRE_Lib.Models;
 using Newtonsoft.Json;
@@ -22,35 +23,35 @@ namespace CarparkREAPI.Tests
             // Standard Rate - 47 Mins
             rq.EntryDT = dtTest.AddHours(9);                    // Thursday 9:00 AM
             rq.ExitDT = dtTest.AddHours(9).AddMinutes(47);      // Thursday 9:47 AM
-            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Standard Rate");
             Assert.IsTrue(rs.TotalPrice == 5);
 
             // Standard Rate - 1 Hour 47 Mins
             rq.EntryDT = dtTest.AddHours(9);                    // Thursday 9:00 AM
             rq.ExitDT = dtTest.AddHours(10).AddMinutes(47);     // Thursday 10:47 AM
-            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Standard Rate");
             Assert.IsTrue(rs.TotalPrice == 10);
 
             // Standard Rate - 2 Hours 47 Mins
             rq.EntryDT = dtTest.AddHours(9);                    // Thursday 9:00 AM
             rq.ExitDT = dtTest.AddHours(11).AddMinutes(47);     // Thursday 11:47 AM
-            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Standard Rate");
             Assert.IsTrue(rs.TotalPrice == 15);
 
             // Standard Rate - 3 Hours 47 Mins
             rq.EntryDT = dtTest.AddHours(9);                    // Thursday 9:00 AM
             rq.ExitDT = dtTest.AddHours(12).AddMinutes(47);     // Thursday 12:47
-            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Standard Rate");
             Assert.IsTrue(rs.TotalPrice == 20);
 
             // Standard Rate - 2 Days 7 Hours 47 Mins - Maximum Rate $20 per day
-            rq.EntryDT = dtTest.AddHours(9);                    // Thursday 9:00 AM
-            rq.ExitDT = dtTest.AddDays(2).AddHours(16).AddMinutes(47);     // Thursday 16:47 (4:47 PM)
-            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            rq.EntryDT = dtTest.AddHours(9);                                // Thursday 9:00 AM
+            rq.ExitDT = dtTest.AddDays(2).AddHours(16).AddMinutes(47);     // Saturday 16:47 (4:47 PM)
+            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Standard Rate");
             Assert.IsTrue(rs.TotalPrice == 60);
         }
@@ -72,7 +73,7 @@ namespace CarparkREAPI.Tests
             rq.EntryDT = dtTest.AddHours(6).AddMinutes(30);        // Thursday 06:30 AM
             rq.ExitDT = dtTest.AddHours(16).AddMinutes(30);        // Thursday 16:30 (4:30 PM)
 
-            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Early Bird");
             Assert.IsTrue(rs.TotalPrice == 13);
         }
@@ -96,14 +97,14 @@ namespace CarparkREAPI.Tests
             // Night Rate - Normal weekday test
             rq.EntryDT = dtTest.AddHours(18).AddMinutes(30);         // Thursday 18:30 (6:30PM)
             rq.ExitDT = dtTest.AddDays(1).AddHours(7);               // Friday 07:00 AM
-            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Night Rate");
             Assert.IsTrue(rs.TotalPrice == 6.5m);
 
             // Night Rate - Friday night test
             rq.EntryDT = dtTest.AddDays(1).AddHours(18).AddMinutes(30);     // Friday 18:30 (6:30PM)
             rq.ExitDT = dtTest.AddDays(2).AddHours(7);                      // Saturday 07:00 AM
-            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Night Rate");
             Assert.IsTrue(rs.TotalPrice == 6.5m);
         }
@@ -126,7 +127,7 @@ namespace CarparkREAPI.Tests
             // Weekend Rate
             rq.EntryDT = dtTest.AddMinutes(12);                             // Saturday 00:12 AM
             rq.ExitDT = dtTest.AddDays(1).AddHours(12).AddMinutes(47);      // Sunday 12:47 PM
-            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Weekend Rate");
             Assert.IsTrue(rs.TotalPrice == 10);
         }
@@ -145,9 +146,32 @@ namespace CarparkREAPI.Tests
             // Crossover Case: Qualifies for Standard Rate - 7 Hours 47 Mins ($20) or Early Bird Rate ($13)
             rq.EntryDT = dtTest.AddHours(9);                    // Thursday 9:00 AM
             rq.ExitDT = dtTest.AddHours(16).AddMinutes(47);     // Thursday 16:47 (4:47 PM)
-            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq));
+            var rs = JsonConvert.DeserializeObject<CPRateRS>(engine.GetRate(rq.EntryDT, rq.ExitDT, GetRates()));
             Assert.IsTrue(rs.RateName == "Early Bird");
             Assert.IsTrue(rs.TotalPrice == 13);
+        }
+
+
+        // Load the Test data used...I.e. the RateCard
+        private Rates GetRates()
+        {
+            Rates oRates = new Rates();
+
+            try
+            {
+                // Get the rates from Json file
+                using (StreamReader r = new StreamReader("CarParkRates.json"))
+                {
+                    string json = r.ReadToEnd();
+                    oRates = JsonConvert.DeserializeObject<Rates>(json);
+                }
+            }
+            catch (Exception)
+            {
+                return oRates;
+            }
+
+            return oRates;
         }
     }
 }
