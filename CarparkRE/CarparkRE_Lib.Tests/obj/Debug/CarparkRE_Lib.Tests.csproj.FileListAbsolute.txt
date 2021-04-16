@@ -1,4 +1,3 @@
-F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\obj\Debug\CarparkRE_Lib.Tests.csprojResolveAssemblyReference.cache
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\CarParkRates.json
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\CarparkRE_Lib.Tests.dll
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\CarparkRE_Lib.Tests.pdb
@@ -6,7 +5,8 @@ F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\Carpar
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\Newtonsoft.Json.dll
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\CarparkRE_Lib.pdb
-F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\Newtonsoft.Json.xml
+F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\obj\Debug\CarparkRE_Lib.Tests.csprojResolveAssemblyReference.cache
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\obj\Debug\CarparkRE_Lib.Tests.dll
 F:\Github\andrewsweaney\CarparkRE\CarparkRE\CarparkRE_Lib.Tests\obj\Debug\CarparkRE_Lib.Tests.pdb

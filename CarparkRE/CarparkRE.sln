@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkRE_Lib.Tests", "CarparkRE_Lib.Tests\CarparkRE_Lib.Tests.csproj", "{0A5CBE33-6F1A-4F35-AA41-D49430E1E7C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkREAPI.Tests", "CarparkREAPI.Tests\CarparkREAPI.Tests.csproj", "{14E9955A-3E73-4E7F-AFAB-487E542773D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9C71243-2CBA-4A93-884C-2B70D0BAD95E} = {B9C71243-2CBA-4A93-884C-2B70D0BAD95E}
+		{96A653D8-366A-4CED-90D5-784E2C381AA0} = {96A653D8-366A-4CED-90D5-784E2C381AA0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
